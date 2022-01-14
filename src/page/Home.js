@@ -10,7 +10,7 @@ export default function Home(props) {
     const [pokemonList, setPokemonList] = useState([]);
 
     const getPokemonList = async () => {
-        const listePokemon = await pokeApi.getTwentyFirstPokemon();
+        const listePokemon = await pokeApi.getAllPokemon();
         setPokemonList(listePokemon);
     }
 
@@ -26,7 +26,7 @@ export default function Home(props) {
         setFiltre(search);
         if(search){
             const pokemonFilteredList = pokemonList.filter(pokemon =>
-                pokemon.name === search
+                pokemon.name.includes(search)
             );
             setPokemonList(pokemonFilteredList);
         }else{

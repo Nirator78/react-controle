@@ -19,7 +19,7 @@ export class PokeApi {
 
     async getAllPokemon() {
         try {
-            const response = await axios.get('https://pokeapi.co/api/v2/pokemon/?limit=1118');
+            const response = await axios.get('https://pokeapi.co/api/v2/pokemon/');
 
             const reformatageDonnee = response.data.results.map(pokemon => {
                 const id = this.getId(pokemon);

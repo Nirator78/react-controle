@@ -46,6 +46,9 @@ export default function NavVertical () {
                         }                        
                     </ul>
                 </div>
+                <NavLink to='/favoris' className='block py-2.5 px-4 rounded transition duration-200 hover:bg-green-500 hover:text-white' activeclassname='text-green-500 visited:text-purple-600 ...'>
+                    Favoris
+                </NavLink>
                 <NavLink to='/about' className='block py-2.5 px-4 rounded transition duration-200 hover:bg-green-500 hover:text-white' activeclassname='text-green-500 visited:text-purple-600 ...'>
                     About
                 </NavLink>

@@ -4,6 +4,7 @@ import Home from './page/Home'
 import About from './page/About';
 import PokemonCard from './components/pokemon-detail/PokemonCard';
 import Type from './page/Type';
+import Favoris from './page/Favoris';
 
 function App() {
   return (    
@@ -11,7 +12,7 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />}/>
         <Route path="/pokemon/:pokemon" element={<PokemonCard />}/>
-        <Route path="/favoris" element={<Home />}/>
+        <Route path="/favoris" element={<Favoris />}/>
         <Route path="/type/:type" element={<Type />}/>
         <Route path="about" element={<About />}/>
       </Routes>

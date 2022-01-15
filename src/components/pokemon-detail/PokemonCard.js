@@ -32,7 +32,7 @@ export default function PokemonCard() {
                         </div>
                         <div className="px-6 pt-4">
                             <div className="font-bold text-l mb-2">Corpulance</div>
-                            <span className="inline-flex items-center justify-center px-2 py-1 text-xs font-bold leading-none text-indigo-100 bg-indigo-700 rounded">
+                            <span className="inline-flex items-center justify-center px-2 py-1 text-xs font-bold leading-none text-indigo-100 bg-indigo-700 rounded mr-5">
                                 Poids: {pokemonDetail?.weight}
                             </span>
                             <span className="inline-flex items-center justify-center px-2 py-1 text-xs font-bold leading-none text-indigo-100 bg-indigo-700 rounded">

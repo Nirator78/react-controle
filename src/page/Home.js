@@ -26,7 +26,6 @@ export default function Home(props) {
             window.history.replaceState({}, '', "?search=" + search);
         } else {
             window.location.replace('/');
-            await getPokemonList();
         }
     }
     const {search} = useLocation();

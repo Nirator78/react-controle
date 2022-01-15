@@ -1,34 +1,45 @@
 import React, { useState, useEffect } from 'react';
 import Cors from '../components/navbar/Cors';
+import { PokeApi } from '../service/PokeApi';
 import { toJson } from '../utils/toJson';
+import Item from '../components/list/Item';
+import { capitalizeFirstLetter } from '../utils/stringConverter';
 
 export default function Favoris (props) {
-
     const [favoriList, setFavoriList] = useState([]);
 
-    useEffect(() =>{
+    useEffect(async () =>{
         // Récupération de la valeur favori dans le localstorage et on la converti en json traitable
         let favori = toJson(localStorage.getItem('favori'));
         
-        // Si oui on le re coche
+        // Si il y a des favori on affiche la liste
         if(favori.length){
-            setFavoriList(favori);
+            const pokemonFavorite = await Promise.all(favori.map(async (data) => {
+                const pokeApi = new PokeApi();
+                const pokemon = await pokeApi.getPokemonByName(data);
+
+                return {
+                    name: pokemon.name,
+                    nameDisplay: capitalizeFirstLetter(pokemon.name),
+                    image: pokemon.sprites.front_default
+                }
+            }));
+
+            setFavoriList(pokemonFavorite);
         }
     }, []);
 
     return (
         <div>
             <Cors>
-                <div>
-                    <h2 className="font-bold">Vos Pokémon favoris</h2>
+                <div className="font-bold">
+                    <h2>Vos Pokémon favoris</h2>
                     <br></br>
                     <ul>
                         {
                             favoriList.map((data, key) => {
                                 return (
-                                    <li key={key}>
-                                        {data}
-                                    </li>
+                                    <Item key={key} data={data}></Item>
                                 )
                             })
                         }

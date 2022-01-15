@@ -1,6 +1,6 @@
-# Getting Started with Create React App
+# Clément Duval Controle react js 
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Je m'excuse par avance pour le style j'ai fait le mieux que j'ai pu :) :)
 
 ## Available Scripts
 

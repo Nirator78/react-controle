@@ -1,13 +1,35 @@
 import React from 'react';
 import { Link } from "react-router-dom";
+import { toJson } from '../../utils/toJson';
 
 export default function Item({data}) {
     const {name, image, nameDisplay} = data;
 
     const [checked, setChecked] = React.useState(false);
 
-    const handleChange = () => {
-        console.log("Changement d'etat", name);
+    const handleChangeCheckbox = () => {
+        //Récupération de la valeur favori dans le localstorage et on la converti en json traitable
+        let favori = toJson(localStorage.getItem('favori'));
+
+        if(!checked){
+            // On ajout l'item dans le tableau favori
+            if(favori){
+                // ajout si la valeur existe déjà
+                favori.push(name);
+            }else{
+                // si il n'y a jamais eu de favori
+                favori = [name];
+            }
+            localStorage.setItem('favori', JSON.stringify(favori));
+        }else{
+            // On supprime l'item du tableau favori
+            const index = favori.indexOf(name);
+            if (index > -1) {
+                favori.splice(index, 1);
+            }
+            localStorage.setItem('favori', JSON.stringify(favori));
+        }
+
         setChecked(!checked);
     };
 
@@ -23,7 +45,7 @@ export default function Item({data}) {
                             name={name}
                             type="checkbox"
                             checked={checked}
-                            onChange={handleChange}
+                            onChange={handleChangeCheckbox}
                         />
                         <label htmlFor={name} className="select-none"> Favori</label>
                     </div>                   

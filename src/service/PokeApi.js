@@ -39,15 +39,16 @@ export class PokeApi {
         }
     }
 
+    /**
+     * Récupère un pokemon par son nom
+     * @param string name 
+     * @return pokemon
+     */
     async getPokemonByName(name) {
         try {
             const response = await axios.get('https://pokeapi.co/api/v2/pokemon/' + name);
 
             const pokemon = response.data;
-
-            const image = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${pokemon.id}.png`;
-
-            Object.assign(pokemon, {image});
 
             return pokemon;
         } catch (e) {

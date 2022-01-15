@@ -2,8 +2,8 @@ import React from 'react';
 
 export default function Header () {
     return (
-        <p>
+        <h2 className='text-2xl font-normal leading-normal mt-0 mb-2 text-indigo-800'>
             PokeClémentDex
-        </p>
+        </h2>
     )
 }

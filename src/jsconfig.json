@@ -1,0 +1,14 @@
+{
+    "compilerOptions": {
+        "baseUrl": "./src",
+        "paths": {
+          "components/*": ["./components"],
+          "constante/*": ["./constante"],
+          "page/*": ["./page"],
+          "service/*": ["./service"],
+          "utils/*": ["./utils"]
+        }
+    },
+    "include": ["src", "index.js"],
+    "exclude": ["node_modules"]
+}

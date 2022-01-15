@@ -1,4 +1,5 @@
 import axios from "axios";
+import { capitalizeFirstLetter } from "../utils/stringConverter";
 
 export class PokeApi {
 
@@ -28,6 +29,7 @@ export class PokeApi {
 
                 return {
                     ...pokemon,
+                    nameDisplay: capitalizeFirstLetter(pokemon.name),
                     id,
                     image
                 }
@@ -50,7 +52,10 @@ export class PokeApi {
 
             const pokemon = response.data;
 
-            return pokemon;
+            return {
+                ...pokemon,
+                nameDisplay: capitalizeFirstLetter(pokemon.name),
+            };
         } catch (e) {
             console.error(e);
         }
@@ -74,6 +79,7 @@ export class PokeApi {
 
                 return {
                     ...data.pokemon,
+                    nameDisplay: capitalizeFirstLetter(data.pokemon.name),
                     id,
                     image
                 }

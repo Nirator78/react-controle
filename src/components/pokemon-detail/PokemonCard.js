@@ -28,7 +28,7 @@ export default function PokemonCard() {
                     <div className="max-w-xl rounded overflow-hidden shadow-lg">
                         <img className="w-full" src={pokemonDetail?.sprites?.front_default} alt={pokemonDetail?.name}></img>
                         <div className="px-6 py-4">
-                            <div className="font-bold text-xl mb-2">{pokemonDetail?.name}</div>
+                            <div className="font-bold text-xl mb-2">{pokemonDetail?.nameDisplay}</div>
                         </div>
                         <div className="px-6 pt-4">
                             <div className="font-bold text-l mb-2">Corpulance</div>

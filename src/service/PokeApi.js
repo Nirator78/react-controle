@@ -56,4 +56,33 @@ export class PokeApi {
         }
     }
 
+    /**
+     * Récupère une liste de pokemon par son type
+     * @param string name 
+     * @return pokemon
+     */
+    async getPokemonByType(type) {
+        try {
+            const response = await axios.get('https://pokeapi.co/api/v2/type/' + type);
+
+            const pokemon = response.data.pokemon;
+
+            const pokemonReformater = pokemon.map(data => {
+                const id = this.getId(data.pokemon);
+
+                const image = `https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${id}.png`;
+
+                return {
+                    ...data.pokemon,
+                    id,
+                    image
+                }
+            });
+
+            return pokemonReformater;
+        } catch (e) {
+            console.error(e);
+        }
+    }
+
 }

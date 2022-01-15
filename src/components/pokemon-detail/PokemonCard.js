@@ -3,7 +3,7 @@ import Cors from '../navbar/Cors';
 import { useParams } from "react-router-dom";
 import { PokeApi } from '../../service/PokeApi';
 import Competence from './competence/Competence';
-import Type from './type/Type';
+import PokemonType from './type/PokemonType';
 import Stat from './stat/Stat';
 
 export default function PokemonCard() {
@@ -55,7 +55,7 @@ export default function PokemonCard() {
                             {
                                 pokemonDetail?.types?.map((data, key) => {
                                         return (
-                                            <Type key={key} type={data.type.name}></Type>
+                                            <PokemonType key={key} type={data.type.name}></PokemonType>
                                         )
                                     }
                                 )

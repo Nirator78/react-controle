@@ -19,6 +19,7 @@ export default function Favoris (props) {
                 const pokemon = await pokeApi.getPokemonByName(data);
 
                 return {
+                    id: pokemon.id,
                     name: pokemon.name,
                     nameDisplay: capitalizeFirstLetter(pokemon.name),
                     image: pokemon.sprites.front_default

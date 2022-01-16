@@ -1,6 +1,5 @@
 {
     "compilerOptions": {
-        "baseUrl": "./src",
         "paths": {
           "components/*": ["./components"],
           "constante/*": ["./constante"],
@@ -9,6 +8,5 @@
           "utils/*": ["./utils"]
         }
     },
-    "include": ["src", "index.js"],
     "exclude": ["node_modules"]
 }

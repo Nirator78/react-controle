@@ -4,7 +4,7 @@ import { useEffect } from 'react/cjs/react.development';
 import { toJson } from '../../utils/toJson';
 
 export default function Item({data}) {
-    const {name, image, nameDisplay} = data;
+    const {name, image, nameDisplay, id} = data;
 
     const [checked, setChecked] = useState(false);
 
@@ -53,7 +53,7 @@ export default function Item({data}) {
             <div className="flex items-center">
                 <img className="w-30 h-30 rounded-full mr-4" src={image} alt="Avatar of Jonathan Reinink"/>
                 <div className="text-sm">
-                    <p className="text-gray-900 leading-none">{nameDisplay}</p>
+                    <p className="text-gray-900 leading-none">#{id} - {nameDisplay}</p>
                     <p className="text-blue-600"><Link to={`/pokemon/${name}`}>Voir {nameDisplay}</Link></p>
                     <div className="flex items-center mr-4 mb-2">
                         <input

@@ -50,7 +50,7 @@ export default function Form ({setShowModal}) {
                                 className="form-control w-full block shadow appearance-none border rounded py-2 px-3 text-gray-700 focus:outline-none focus:shadow-outline" 
                                 placeholder="Email"
                                 defaultValue='c.duval@ecole-ipssi.net'
-                                {...register("email", { required: true, pattern: { value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i, message: "invalid email address" } })} 
+                                {...register("email", { required: true, pattern: { value: /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i, message: "Adresse mail non valide" } })} 
                             />
                             {
                                 errors.email?.type === 'required' && 

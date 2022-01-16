@@ -12,14 +12,16 @@ export default function Form ({setShowModal}) {
     const [ validate, setValidate ] = useState(false);
 
     const onSubmit = data => {
+        // Si formulaire est valider on afficher le lottie d'envoie de mail
         setValidate(true);
+        // Pendant 3.5 sec
         setTimeout(
             () => {
                 setShowModal(false)
             },
             3500
         )
-        console.log(data)
+        console.log("Email envoyé (c'est faux)", data)
     };
 
     return (

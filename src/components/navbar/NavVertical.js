@@ -1,31 +1,11 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 
+import {types} from '../../constante/type'
+
 export default function NavVertical () {
-
-    const types = [
-        'normal',
-        'poison',
-        'psychic',
-        'grass',
-        'ground',
-        'ice',
-        'fire',
-        'rock',
-        'dragon',
-        'water',
-        'bug',
-        'dark',
-        'fighting',
-        'ghost',
-        'steel',
-        'flying',
-        'electric',
-        'fairy'
-    ];
-
     return (
-        <div className="flex px-4 py-2 rounded-md text-left">
+        <div className="px-4 py-2 rounded-md text-left">
             <nav>
                 <NavLink to='/' className='block py-2.5 px-4 rounded transition duration-200 hover:bg-green-500 hover:text-white' activeclassname='text-green-500 visited:text-purple-600 ...'>
                     Home

@@ -20,7 +20,6 @@ export default function Modal() {
                 loop
                 animationData={sendLottieJson}
                 play
-                speed={0.7}
                 style={{ width: 20, height: 20 }}
             />
             <span className="pl-2">Contact</span> 

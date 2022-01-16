@@ -1,6 +1,10 @@
 import React from "react";
 import Form from '../form/Form'
 
+import Lottie from 'react-lottie-player'
+
+import sendLottieJson from '../../lottie/send.json'
+
 export default function Modal() {
   const [showModal, setShowModal] = React.useState(false);
 
@@ -11,7 +15,16 @@ export default function Modal() {
         type="button"
         onClick={() => setShowModal(true)}
       >
-        Contact
+          <div className="flex">
+            <Lottie
+                loop
+                animationData={sendLottieJson}
+                play
+                speed={0.7}
+                style={{ width: 20, height: 20 }}
+            />
+            <span className="pl-2">Contact</span> 
+        </div>
       </button>
       {showModal ? (
         <>

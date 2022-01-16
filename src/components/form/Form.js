@@ -1,6 +1,8 @@
 import React from "react";
 import { useForm } from "react-hook-form";
 
+import FormError from '../form/formError/FormError';
+
 export default function Form () {
     const { register, handleSubmit, formState: { errors } } = useForm();
 
@@ -23,11 +25,11 @@ export default function Form () {
                 />
                 {
                     errors.email?.type === 'required' && 
-                    <span className="text-red-500 text-sm">L'email est un champ obligatoire</span>
+                    <FormError text="L'email est un champ obligatoire"/>
                 }
                 {
                     errors.email?.type === 'pattern' && 
-                    <span className="text-red-500 text-sm">L'email n'est pas valide</span>
+                    <FormError text="L'email n'est pas valide"/>
                 }
                 <br></br>
 
@@ -42,11 +44,11 @@ export default function Form () {
                 />
                 {
                     errors.sujet?.type === 'required' && 
-                    <span className="text-red-500 text-sm">Le sujet est un champ obligatoire</span>
+                    <FormError text="Le sujet est un champ obligatoire"/>
                 }
                 {
                     errors.sujet?.type === 'maxLength' && 
-                    <span className="text-red-500 text-sm">Le sujet ne doit pas dépasser les 20 caractères</span>
+                    <FormError text="Le sujet ne doit pas dépasser les 20 caractères"/>
                 }
                 <br></br>
 
@@ -62,11 +64,11 @@ export default function Form () {
                 />
                 {
                     errors.corps?.type === 'required' && 
-                    <span className="text-red-500 text-sm">Le corps du mail est un champs obligatoire</span>
+                    <FormError text="Le corps du mail est un champs obligatoire"/>
                 }
                 {
                     errors.corps?.type === 'maxLength' && 
-                    <span className="text-red-500 text-sm">Le corps du mail ne doit pas dépasser les 150 caractères</span>
+                    <FormError text="Le corps du mail ne doit pas dépasser les 150 caractères"/>
                 }
 
                 <br></br>

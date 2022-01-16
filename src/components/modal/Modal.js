@@ -44,7 +44,7 @@ export default function Modal() {
                   </button>
                 </div>
                 <div className="relative p-6 flex-auto">
-                  <Form/>
+                  <Form setShowModal={setShowModal}/>
                 </div>
               </div>
             </div>

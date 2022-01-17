@@ -5,7 +5,7 @@ export const colors = {
     'grass': '#16A34A',
     'ground': '#FEF08A',
     'ice': '#7DD3FC',
-    'fire': '#E11D48',
+    'fire': '#DC2626',
     'rock': '#FED7AA',
     'dragon': '#6D28D9',
     'water': '#3B82F6',

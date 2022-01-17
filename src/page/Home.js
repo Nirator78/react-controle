@@ -4,6 +4,7 @@ import List from "../components/list/List";
 import {PokeApi} from "../service/PokeApi";
 import Filtre from "../components/filtre/Filtre";
 import {useLocation} from "react-router-dom";
+import Title from '../components/title/Title';
 
 export default function Home(props) {
     const pokeApi = new PokeApi();
@@ -42,7 +43,7 @@ export default function Home(props) {
     return (
         <div>
             <Cors>
-                <h1> Liste des pokemons </h1>
+                <Title title="Liste des Pokémons" />
                 <Filtre filtre={filtre} handleFiltreChange={handleFiltreChange}/>
                 <div className="font-bold">
                     <List data={pokemonList}/>

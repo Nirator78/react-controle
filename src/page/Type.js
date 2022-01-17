@@ -3,6 +3,7 @@ import { useParams } from 'react-router-dom';
 import { useEffect } from 'react/cjs/react.development';
 import List from '../components/list/List';
 import Cors from '../components/navbar/Cors';
+import Title from '../components/title/Title';
 import { PokeApi } from '../service/PokeApi';
 
 export default function Type (props) {
@@ -24,7 +25,7 @@ export default function Type (props) {
     return (
         <div>
         <Cors>
-            <h1> Liste des pokemons de type : {type}</h1>
+            <Title title={`Liste des pokemons de type : ${type}`} />
             <div className="font-bold">
                 <List data={pokemonList}/>
             </div>

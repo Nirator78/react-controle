@@ -4,6 +4,7 @@ import { PokeApi } from '../service/PokeApi';
 import { toJson } from '../utils/toJson';
 import Item from '../components/list/Item';
 import { capitalizeFirstLetter } from '../utils/stringConverter';
+import Title from '../components/title/Title';
 
 export default function Favoris (props) {
     const [favoriList, setFavoriList] = useState([]);
@@ -34,7 +35,7 @@ export default function Favoris (props) {
         <div>
             <Cors>
                 <div className="font-bold">
-                    <h2>Vos Pokémon favoris</h2>
+                    <Title title="Vos Pokémon favoris" />
                     <br></br>
                     <ul>
                         {

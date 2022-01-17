@@ -30,7 +30,7 @@ export default function NavVertical () {
                     Favoris
                 </NavLink>
                 <NavLink to='/about' className='block py-2.5 px-4 rounded transition duration-200 hover:bg-green-500 hover:text-white' activeclassname='text-green-500 visited:text-purple-600 ...'>
-                    About
+                    A propos
                 </NavLink>
             </nav>
         </div>

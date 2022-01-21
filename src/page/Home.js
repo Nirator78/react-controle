@@ -32,11 +32,11 @@ export default function Home(props) {
     const {search} = useLocation();
 
     // didMount sur la liste des pokemons
-    useEffect(async () => {
-        await getPokemonList();
+    useEffect(() => {
+        getPokemonList();
         let filtreUrl = new URLSearchParams(search).get('search');
         if (filtreUrl) {
-            await handleFiltreChange(filtreUrl);
+            handleFiltreChange(filtreUrl);
         }
     }, [])
 

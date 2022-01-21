@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import Pikachu from '../pikachu/Pikachu';
 
 export default function Title ({title, textColor="text-indigo-800"}) {

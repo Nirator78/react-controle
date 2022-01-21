@@ -1,8 +1,5 @@
 import React from 'react';
 
-import Lottie from 'react-lottie-player'
-
-import pokemonLottieJson from '../../lottie/pikachu'
 import Pikachu from '../pikachu/Pikachu';
 
 export default function Header () {

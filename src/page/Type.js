@@ -33,9 +33,9 @@ export default function Type () {
                     types.map((type, key) => {
                         return (
                             <>
-                                <label key={`${key}filtre`} className="inline-flex items-center">
-                                    <input type="radio" value={type} onChange={handleChange} name={type} className="form-radio" />
-                                    <span htmlFor={type} className="ml-2">{type}</span>
+                                <label key={`${key}label`} className="inline-flex items-center">
+                                    <input key={`${key}input`} type="radio" value={type} onChange={handleChange} name="type" className="form-radio" />
+                                    <span key={`${key}span`} htmlFor={type} className="ml-2">{type}</span>
                                 </label>
                             </>
                         )

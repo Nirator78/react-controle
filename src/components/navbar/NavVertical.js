@@ -9,7 +9,7 @@ export default function NavVertical () {
                     Home
                 </NavLink>
                 <NavLink to='/type' className='block py-2.5 px-4 rounded transition duration-200 hover:bg-green-500 hover:text-white' activeclassname='text-green-500 visited:text-purple-600 ...'>
-                    Type
+                    Types
                 </NavLink>
                 <NavLink to='/favoris' className='block py-2.5 px-4 rounded transition duration-200 hover:bg-green-500 hover:text-white' activeclassname='text-green-500 visited:text-purple-600 ...'>
                     Favoris

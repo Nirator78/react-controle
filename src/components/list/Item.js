@@ -9,7 +9,7 @@ export default function Item({data}) {
 
     const handleChangeCheckbox = () => {
         // Récupération de la valeur favori dans le localstorage et on la converti en json traitable
-        let favori = toJson(localStorage.getItem('favori'));
+        let favori = toJson(localStorage.getItem('favori')) || [];
 
         if(!checked){
             // On ajout l'item dans le tableau favori
@@ -35,7 +35,7 @@ export default function Item({data}) {
 
     useEffect(() =>{
         // Récupération de la valeur favori dans le localstorage et on la converti en json traitable
-        let favori = toJson(localStorage.getItem('favori'));
+        let favori = toJson(localStorage.getItem('favori')) || [];
         
         // On cherche si le pokemon est en favori
         const searchName = favori.filter(nameSearch => nameSearch === name);

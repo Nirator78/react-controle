@@ -11,7 +11,7 @@ export default function Favoris (props) {
 
     useEffect(async () =>{
         // Récupération de la valeur favori dans le localstorage et on la converti en json traitable
-        let favori = toJson(localStorage.getItem('favori'));
+        let favori = toJson(localStorage.getItem('favori')) || [];
         
         // Si il y a des favori on affiche la liste
         if(favori.length){

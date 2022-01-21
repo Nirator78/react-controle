@@ -19,7 +19,7 @@ export default function Type (props) {
     // didMount sur la liste des pokemons
     useEffect(async () => {
         await getPokemonList();
-    }, [type])
+    }, [])
 
 
     return (

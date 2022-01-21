@@ -1,6 +1,5 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from "react-router-dom";
-import { useEffect } from 'react/cjs/react.development';
 import { toJson } from '../../utils/toJson';
 
 export default function Item({data}) {

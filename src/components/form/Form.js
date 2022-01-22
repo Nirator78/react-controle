@@ -7,10 +7,13 @@ import Lottie from 'react-lottie-player'
 
 import sendValidateLottieJson from '../../lottie/send-validate.json'
 
+import{ init, send } from '@emailjs/browser';
+init("user_vQH5bqcZleTIY2sE8Qv2n");
+
 export default function Form ({setShowModal}) {
     const { register, handleSubmit, formState: { errors } } = useForm();
     const [ validate, setValidate ] = useState(false);
-
+    
     const onSubmit = data => {
         // Si formulaire est valider on afficher le lottie d'envoie de mail
         setValidate(true);
@@ -21,7 +24,13 @@ export default function Form ({setShowModal}) {
             },
             3500
         )
-        console.log("Email envoyé (c'est faux)", data)
+
+        send('service_z7az12a', 'template_2wk24kq', data, 'user_vQH5bqcZleTIY2sE8Qv2n')
+            .then((result) => {
+                console.log(result.text);
+            }, (error) => {
+                console.log(error.text);
+            });
     };
 
     return (

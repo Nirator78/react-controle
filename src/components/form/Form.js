@@ -15,21 +15,16 @@ export default function Form ({setShowModal}) {
     const [ validate, setValidate ] = useState(false);
     
     const onSubmit = data => {
-        // Si formulaire est valider on afficher le lottie d'envoie de mail
+        // Si formulaire est valider on affiche le lottie d'envoie de mail
         setValidate(true);
-        // Pendant 3.5 sec
-        setTimeout(
-            () => {
-                setShowModal(false)
-            },
-            3500
-        )
 
         send('service_z7az12a', 'template_2wk24kq', data, 'user_vQH5bqcZleTIY2sE8Qv2n')
             .then((result) => {
-                console.log(result.text);
+                // On ferme le modal si pas d'erreur
+                setShowModal(false)
             }, (error) => {
-                console.log(error.text);
+                // Sinon on retourne au formulaire 
+                setValidate(false);
             });
     };
 

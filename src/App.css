@@ -36,3 +36,13 @@
     transform: rotate(360deg);
   }
 }
+
+/* Ajout de la police pokemon, unique sur les titres pour des questions de lisibilité */
+@font-face {
+  font-family: 'PokemonFont';
+  src: local('PokemonFont'), url(./font/PokemonFont/Pokemon\ Solid.ttf) format('truetype');
+}
+
+h1 {
+  font-family: 'PokemonFont'
+}

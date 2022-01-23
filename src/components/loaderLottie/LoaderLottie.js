@@ -6,12 +6,12 @@ import loaderLottie from '../../lottie/loading.json'
 
 export const LoaderLottie = () => {
     return (
-        <div className="grid place-items-center h-screen">
+        <div className="grid place-items-center">
             <Lottie
                 loop
                 animationData={loaderLottie}
                 play
-                style={{ width: '100%', height: '100%' }}
+                style={{ width: '60%', height: '75%' }}
             />
         </div>
     );

@@ -1,5 +1,4 @@
 import React from 'react';
-import { Loader } from '../components/loader/Loader';
 import Cors from '../components/navbar/Cors';
 import Modal from '../components/modal/Modal';
 import Title from '../components/title/Title';
@@ -10,9 +9,6 @@ export default function About (props) {
             <Cors>
                 <div className="font-bold">
                     <Title title="A propos" />
-                    <br></br>
-                    Attention ça tourne mais ça charge rien :)
-                    <Loader />
                     <br></br>
                     <Modal />
                 </div>

@@ -43,6 +43,6 @@
   src: local('PokemonFont'), url(./font/PokemonFont/Pokemon\ Solid.ttf) format('truetype');
 }
 
-h1 {
+h1, h2 {
   font-family: 'PokemonFont'
 }

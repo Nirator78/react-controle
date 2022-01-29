@@ -5,9 +5,9 @@ export default function List ({data}) {
     return (
         <ul>
             {
-                data.map((data, key) => {
+                data.map((data) => {
                         return (
-                            <Item key={key} data={data}></Item>
+                            <Item key={data.name} data={data}></Item>
                         )
                     }
                 )

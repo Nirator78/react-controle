@@ -1,8 +1,4 @@
 # Nirator78 Controle react js 
-
-Je m'excuse par avance pour le style j'ai fait le mieux que j'ai pu :) :)
-
-Voici le lien d'hébergement netlify sur mon nom de domaine freenom en HTTPS bien sur.
 [Lien](https://pokedex.nirator.tk/)
 
 ## Available Scripts
